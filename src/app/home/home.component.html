@@ -1,0 +1,58 @@
+<div class="container">
+    <div class="main">
+        <h1 style="font-size: 25px;">Watch the latest football highlights  across Europe & America </h1>
+        <p>Bringing you livescores,standings,stats,live streaming url's & highlights from all over Europe and America on the palm of your hands </p>
+        <div class="content">
+            <p>Current match highlights</p>
+            <div class="row principal-content">
+                <div class="col-sm-4 col-xs-6" *ngFor="let result of data.response.slice(0,6)">
+
+                 <div class="panel panel-default">
+              
+                    <div *ngFor="let out of result.videos">
+                      <ng-container *ngIf="out.title == 'Highlights'">
+                        <p [innerHTML]="out.embed | safe"></p>
+                        <p>{{out.title}}</p> 
+                      </ng-container>
+                    </div>
+                   <div class="panel-body content-information">
+                     <p class="lead" style="font-size: 10px;"> {{result.title}} </p> 
+                     <p class="lead"style="font-size: 10px;color:orange"> {{result.competition}} </p>
+                   
+                   </div>
+               
+                  
+                 </div>
+            
+               
+               </div><!--/col-->
+               
+       
+               </div>
+        </div>
+      
+    </div>
+  
+   
+
+    <footer class="footer" style="margin-bottom:0px">
+
+        <div class="container">
+          <hr>
+          <article class="foot-content-left">
+            <ul>&copy;2021 | <a href="//patricklusaya.netlify.app">Patrick</a></ul>
+          </article>
+  
+          <article class="foot-content">
+            <ul>
+             
+              <li class="social"><a href="https://www.instagram.com/patisocialnet">Instagram</a></li>
+              <li class="social"><a href="https://twitter.com/patisocialnet">Twitter</a></li>
+              <li class="social"><a href="https://www.linkedin.com/company/">LinkedIn</a></li>
+            </ul>
+          </article>
+  
+        </div>
+  
+      </footer>      
+</div>

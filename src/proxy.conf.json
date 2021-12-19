@@ -1,0 +1,7 @@
+{
+    "/api/*": {
+        "target": "https://api.football-data.org/v2",
+        "secure": true,
+        "logLevel": "debug"
+    }
+}

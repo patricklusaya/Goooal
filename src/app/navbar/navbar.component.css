@@ -1,0 +1,12 @@
+@import url('https://fonts.googleapis.com/css2?family=Red+Hat+Mono:wght@300&display=swap');
+* {
+    font-family: 'Red Hat Mono', monospace;
+    font-weight: bold;
+}
+.btn{
+   border-color: orange;
+   color: rgb(31, 27, 27);
+}
+.btn:hover{
+    background-color: orange;
+}
