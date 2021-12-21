@@ -1,0 +1,29 @@
+<div class="container" style="margin-top: 40px;">
+ <p>Premier League <img src="../assets/images/premier.png" alt="" style="width: 30px;height:30px;border-radius: 100%;"></p>  
+ <table style="margin-top: 2px;">
+    <thead>
+      <tr>
+        <th>Position</th>
+        <th>Club name</th>
+        <th>Points</th>
+        <th>GD</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor ="let standing of datay.data.standings">
+          <td data-column="Position">{{standing.position}}</td>
+          <ng-container *ngFor ="let team of teams.data">
+            <ng-container *ngIf="team.team_id == standing.team_id"> <td data-column="Club name">  <img [src]="team.logo" style="height: 30px;width: 30px;"> {{team.name}}</td></ng-container>
+          </ng-container>
+          
+          <td data-column="Points">{{standing.points}}</td>
+    <td data-column="GD">{{standing.overall.goals_diff}}</td>
+           
+        
+          
+        
+      </tr>
+     
+    </tbody>
+  </table>
+</div>

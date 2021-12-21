@@ -20,6 +20,7 @@ export class HomeComponent implements OnInit {
     const url ='https://www.scorebat.com/video-api/v3'
     this.http.get(url).subscribe((res)=>{
       this.data = res
+      console.log(res);
     })
 }
 ngOnInit(): void {
