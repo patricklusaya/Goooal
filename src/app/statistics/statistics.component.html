@@ -1,0 +1,68 @@
+
+<div class="container" style="margin-top: 20px;">
+    <p>Top Scorers EPL <img src="../assets/images/premier.png" alt="" style="width: 30px;height:30px;border-radius: 100%;"></p>  
+    <div style="overflow-x:auto;">
+        <table>
+          <tr>
+            <th>Pos</th>
+            <th>Name</th>
+            <th>Goals </th>
+            <th>Mins</th>
+            <th>Penalties</th>
+            <th>Games</th>
+            
+          </tr>
+          <tr *ngFor ="let players of goalers.data.slice(0,5)">
+           <td>  {{players.pos}} </td>
+           <td> {{players.player.player_name}} </td>
+           <td> {{players.goals.overall}} </td>
+           <td> {{players.minutes_played}} </td>
+           <td> {{players.penalties}} </td>
+           <td>  {{players.matches_played}} </td>
+        
+          </tr>
+      
+        </table>
+        <p style="margin-top: 50px;">Top Scorers Laliga <img src="../assets/images/llg.png" alt="" style="width: 30px;height:30px;border-radius: 100%;"></p> 
+       <table>
+        <tr>
+            <th>Pos</th>
+            <th>Name</th>
+            <th>Goals </th>
+            <th>Mins</th>
+            <th>Penalties</th>
+            <th>Games</th>
+            
+          </tr>
+          <tr *ngFor ="let llg of laligaGoalers.data.slice(0,5)">
+            <td>  {{llg.pos}} </td>
+            <td> {{llg.player.player_name}} </td>
+            <td> {{llg.goals.overall}} </td>
+            <td> {{llg.minutes_played}} </td>
+            <td> {{llg.penalties}} </td>
+        
+            <td>  {{llg.matches_played}} </td>
+          </tr>
+       </table>
+      </div>
+      <footer class="footer" style="margin-bottom:0px">
+
+        <div class="container">
+          <hr>
+          <article class="foot-content-left">
+            <ul>&copy;2021 | <a href="//patricklusaya.netlify.app">Patrick</a></ul>
+          </article>
+    
+          <article class="foot-content">
+            <ul>
+             
+              <li class="social"><a href="https://www.instagram.com/patisocialnet">Instagram</a></li>
+              <li class="social"><a href="https://twitter.com/patisocialnet">Twitter</a></li>
+              <li class="social"><a href="https://www.linkedin.com/company/">LinkedIn</a></li>
+            </ul>
+          </article>
+    
+        </div>
+    
+      </footer>  
+</div>
