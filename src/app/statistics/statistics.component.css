@@ -127,3 +127,10 @@ table {
 }
  
   /* end footer */
+
+  .loader{
+    width:100%;
+    display: flex;
+    justify-content: center;
+  
+  }

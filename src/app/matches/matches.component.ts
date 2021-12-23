@@ -10,6 +10,7 @@ import { DatePipe } from '@angular/common';
 export class MatchesComponent implements OnInit {
 public myMatches: any = []
 myDates: any;
+loader = true;
   constructor( private http: HttpClient , public datePipe: DatePipe) { 
     this.myDates = this.datePipe.transform(new Date(), 'yyyy-MM-dd');
   }
@@ -18,11 +19,14 @@ myDates: any;
 getMyMatches(){
   const url = "https://app.sportdataapi.com/api/v1/soccer/matches?apikey=68c736a0-6174-11ec-91ff-29d6d9345955&season_id=1980&date_from="+ this.myDates;
   return this.http.get(url).subscribe((res)=>{
+ 
     this.myMatches =res
+    this.loader = false;
     console.log(res);
     
   })
 }
+
 
   ngOnInit(): void {
     this.getMyMatches()

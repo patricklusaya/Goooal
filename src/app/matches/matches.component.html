@@ -1,10 +1,15 @@
 
 
 <div class="container" style="margin-top: 20px;">
+
    <p>EPL Upcoming Fixtures <img src="../assets/images/premier.png" alt="" style="width: 30px;height:30px;border-radius: 100%;"></p>  
 
 <body>
-
+  <div class="loader" *ngIf="loader">
+    <div class="spinner-grow text-warning"  style="width: 3rem; height: 3rem;"  role="status">
+  <span class="sr-only">Loading...</span>
+</div>
+  </div>
 <div class="match_today container" id="match_today" *ngFor="let match of myMatches.data.slice(0,6)">
   <div class="gw" style="text-align: center;">
    <p> Gameweek {{match.round.name}}  </p>
@@ -21,7 +26,7 @@
           <div class="right_match">
              <span class="right_tech">
          <img [src]="match.away_team.logo" style="height: 30px;width: 30px;">
-         <div class="fname" style="font-size: 10px;"> {{match.away_team.name}} </div>
+         <div class="fname" style="font-size: 10px;"> {{match.away_team.short_code}} </div>
 
               </span>
           </div>
@@ -33,7 +38,7 @@
                 <div class="left_match">
                   <span class="left_tech">
                    <img [src]="match.home_team.logo" style="height: 30px;width: 30px;">
-                      <div class="fname" style="font-size: 10px;"> {{match.home_team.name}} </div>
+                      <div class="fname" style="font-size: 10px;"> {{match.home_team.short_code}} </div>
                   </span>
                </div>
           

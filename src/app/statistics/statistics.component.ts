@@ -9,12 +9,14 @@ import { HttpClient } from '@angular/common/http';
 export class StatisticsComponent implements OnInit {
   public goalers:any= []
   public laligaGoalers: any=[]
+  loader = true;
 
   constructor( private http:HttpClient) { }
   getTopScorers(){
     const url ="https://app.sportdataapi.com/api/v1/soccer/topscorers?apikey=68c736a0-6174-11ec-91ff-29d6d9345955&season_id=1980";
     return this.http.get(url).subscribe((res)=>{
       this.goalers= res
+      this.loader = false
       console.log(res);
     })
   }

@@ -11,6 +11,7 @@ export class StandingsComponent implements OnInit {
 
   public datay:any = []
   public teams:any =[]
+  loader = true;
   
 
   constructor(private http: HttpClient) {}
@@ -19,6 +20,7 @@ export class StandingsComponent implements OnInit {
     const url ='https://app.sportdataapi.com/api/v1/soccer/standings?apikey=68c736a0-6174-11ec-91ff-29d6d9345955&season_id=1980'
     this.http.get(url).subscribe((res)=>{
       this.datay = res
+      this.loader=false
       console.log(res);
     
     })

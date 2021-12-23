@@ -194,3 +194,10 @@ only screen and (max-width: 760px),
 }
  
   /* end footer */
+
+   .loader{
+    width:100%;
+    display: flex;
+    justify-content: center;
+  
+  }

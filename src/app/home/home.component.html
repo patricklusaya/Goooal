@@ -4,6 +4,10 @@
         <p>Bringing you livescores,standings,stats,live streaming url's & highlights from all over Europe and America on the palm of your hands </p>
         <div class="content">
             <p>Current match highlights</p>
+            <div class="loader" *ngIf="loader">
+              <div class="spinner-grow text-warning"  style="width: 3rem; height: 3rem;"  role="status">
+            <span class="sr-only">Loading...</span></div>
+          </div>
             <div class="row principal-content">
                 <div class="col-sm-4 col-xs-6" *ngFor="let result of data.response.slice(0,6)">
 

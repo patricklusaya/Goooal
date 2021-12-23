@@ -318,4 +318,43 @@ button {
 }
  
   /* end footer */
-   
+
+
+  /* Loader */
+
+  /* @keyframes loader-animation {
+    0% {
+        left: -100%;
+    }
+    49% {
+        left: 100%;
+    }
+    50% {
+        left: 100%;
+    }
+    100% {
+        left: -100%;
+    }
+}
+.loader {
+height: 5px;
+width: 100%;
+overflow: hidden;
+}
+.loader .bar {
+position: relative;
+height: 5px;
+width: 100%;
+background-color: orange;
+animation-name: loader-animation;
+animation-duration: 3s;
+animation-iteration-count: infinite;
+animation-timing-function: ease-in-out;
+} */
+
+.loader{
+  width:100%;
+  display: flex;
+  justify-content: center;
+
+}

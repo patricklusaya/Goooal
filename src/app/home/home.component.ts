@@ -12,6 +12,7 @@ import { HttpClient } from "@angular/common/http";
 })
 export class HomeComponent implements OnInit {
   public data:any = []
+  loader = true;
   constructor(private http: HttpClient ,private searchService:SearchServiceService ) {
  
   }
@@ -20,6 +21,7 @@ export class HomeComponent implements OnInit {
     const url ='https://www.scorebat.com/video-api/v3'
     this.http.get(url).subscribe((res)=>{
       this.data = res
+      this.loader=false
       console.log(res);
     })
 }
