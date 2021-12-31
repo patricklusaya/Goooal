@@ -1,0 +1,12 @@
+.k{
+    color:#f38823;
+}
+
+body{margin:0}
+#aiscore-free{
+    margin-top: 30px;
+    margin-bottom: 20px;
+    display:flex;
+    justify-content:center;
+    height:100vh
+}

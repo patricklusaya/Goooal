@@ -1,0 +1,35 @@
+<div class="container" style="margin-top: 20px;">
+    <p>Popular highlights from across the world</p>
+    <div class="loader" *ngIf="loader">
+        <div class="spinner-grow text-warning"  style="width: 3rem; height: 3rem;"  role="status">
+      <span class="sr-only">Loading...</span>
+    </div>
+      </div>
+
+      <div class="row principal-content">
+        <div class="col-sm-4 col-xs-6" *ngFor="let result of myHighlights.response.slice(0,12)">
+
+         <div class="panel panel-default">
+      
+            <div *ngFor="let video of result.videos | filterVideos:'Highlights'; let index=index">
+                <ng-container *ngIf="index === 0">
+                    <p [innerHTML]="video.embed | safe"></p>
+                    
+                </ng-container>
+            </div>
+           <div class="panel-body content-information">
+             <p class="lead" style="font-size: 10px;"> {{result.title}} </p> 
+             <p class="lead"style="font-size: 10px;color:orange"> {{result.competition}} </p>
+           
+           </div>
+       
+          
+         </div>
+    
+       
+       </div><!--/col-->
+       
+
+       </div>
+
+</div>

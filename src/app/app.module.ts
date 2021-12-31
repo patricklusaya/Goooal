@@ -17,12 +17,15 @@ import { FormsModule } from '@angular/forms';
 import { MatchesComponent } from './matches/matches.component';
 import { ScorersComponent } from './scorers/scorers.component';
 import { StatisticsComponent } from './statistics/statistics.component';
-import { LivescoresComponent } from './livescores/livescores.component';  
+import { LivescoresComponent } from './livescores/livescores.component';
+import { HighlightsComponent } from './highlights/highlights.component';
+import { NewsComponent } from './news/news.component';
+import { FilterVideosPipe } from './filter-videos.pipe';  
 
 
 
 @NgModule({
-  declarations: [AppComponent,SafePipe, NavbarComponent, HomeComponent, StandingsComponent, StatsComponent, MatchesComponent, ScorersComponent, StatisticsComponent, LivescoresComponent ],
+  declarations: [AppComponent,SafePipe, NavbarComponent, HomeComponent, StandingsComponent, StatsComponent, MatchesComponent, ScorersComponent, StatisticsComponent, LivescoresComponent, HighlightsComponent, NewsComponent, FilterVideosPipe ],
   imports: [
     CommonModule,
     BrowserModule,

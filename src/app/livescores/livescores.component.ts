@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { HttpClient } from "@angular/common/http";
+declare var myLivescores: any;
 
 @Component({
   selector: 'app-livescores',
@@ -6,10 +8,22 @@ import { Component, OnInit } from '@angular/core';
   styleUrls: ['./livescores.component.css']
 })
 export class LivescoresComponent implements OnInit {
+  public scores:any = []
+  loader =true
+  constructor( private http: HttpClient) { }
 
-  constructor() { }
+getScores(){
+  const url ="https://api.football-data.org/v2/matches";
+  this.http.get(url).subscribe((res)=>{
+    this.scores = res
+   
+    console.log(res);
+})}
 
   ngOnInit(): void {
+    this.getScores()
+   new myLivescores()
+ 
   }
 
 }
