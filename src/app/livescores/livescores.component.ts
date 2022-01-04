@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
 
+
 declare var myLivescores: any;
 
 @Component({
@@ -9,6 +10,7 @@ declare var myLivescores: any;
   styleUrls: ['./livescores.component.css']
 })
 export class LivescoresComponent implements OnInit {
+
   public scores:any = []
   loader =true
   constructor( private http: HttpClient) { }
@@ -24,8 +26,9 @@ getScores(){
   ngOnInit(): void {
     this.getScores()
   //  new myLivescores()
-  var player = new  myLivescores.Player("<player div ID>", );
- 
+
+  var player = new  myLivescores.Player("<player div ID>" );
   }
+
 
 }

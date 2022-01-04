@@ -21,6 +21,7 @@ import { LivescoresComponent } from './livescores/livescores.component';
 import { HighlightsComponent } from './highlights/highlights.component';
 import { NewsComponent } from './news/news.component';
 import { FilterVideosPipe } from './filter-videos.pipe';  
+import {NgbModule} from '@ng-bootstrap/ng-bootstrap';  
 
 
 
@@ -31,7 +32,8 @@ import { FilterVideosPipe } from './filter-videos.pipe';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule, 
-    FormsModule
+    FormsModule,
+    NgbModule
   ],
   exports: [SafePipe],
   providers: [SafePipe ,DatePipe],
