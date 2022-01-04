@@ -1,7 +1,10 @@
 {
-    "/api/*": {
-        "target": "https://api.football-data.org/v2",
-        "secure": true,
-        "logLevel": "debug"
-    }
-}
+    "/sky/*":{
+        "target": "https://skysportsapi.herokuapp.com",
+        "secure": false,
+        "changeOrigin": true,
+        "logLevel": "debug",
+        "pathRewrite": {
+            "^/sky": ""
+        }
+}}

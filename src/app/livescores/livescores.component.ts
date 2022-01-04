@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { HttpClient } from "@angular/common/http";
+
 declare var myLivescores: any;
 
 @Component({
@@ -22,7 +23,8 @@ getScores(){
 
   ngOnInit(): void {
     this.getScores()
-   new myLivescores()
+  //  new myLivescores()
+  var player = new  myLivescores.Player("<player div ID>", );
  
   }
 
