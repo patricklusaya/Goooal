@@ -5,17 +5,21 @@
       <span class="sr-only">Loading...</span>
     </div>
       </div>
+    
+<div class="myInput" style="margin: auto;width:100%">
 
+  <input type="text"[(ngModel)]="searchText"  class="inp" placeholder="   Search team 🕵  " style="margin-bottom: 20px;" />
+</div>
       <div class="row principal-content">
-        <div class="col-sm-4 col-xs-6" *ngFor="let result of myHighlights.response.slice(0,12)">
-
+        <div class="col-sm-4 col-xs-6" *ngFor="let result of data?.response| filter : searchText">
+    
          <div class="panel panel-default">
       
-            <div *ngFor="let video of result.videos | filterVideos:'Highlights'; let index=index">
-                <ng-container *ngIf="index === 0">
-                    <p [innerHTML]="video.embed | safe"></p>
-                    
-                </ng-container>
+            <div *ngFor="let out of result.videos">
+              <ng-container *ngIf="out.title == 'Highlights'">
+                <p [innerHTML]="out.embed | safe"></p>
+                <p>{{out.title}}</p> 
+              </ng-container>
             </div>
            <div class="panel-body content-information">
              <p class="lead" style="font-size: 10px;"> {{result.title}} </p> 
@@ -27,9 +31,9 @@
          </div>
     
        
-       </div><!--/col-->
-       
-
        </div>
+       
+    
+       </div> 
 
 </div>

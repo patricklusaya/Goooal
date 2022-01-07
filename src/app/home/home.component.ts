@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Subject } from 'rxjs';
 import { SearchServiceService } from '../search-service.service';
-import { FetchHighlightsService } from '../fetch-highlights.service';
+
 
 import { HttpClient } from "@angular/common/http";
 

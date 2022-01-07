@@ -1,37 +1,13 @@
 <div class="container" style="margin-top: 20px;">
     <P>Sports Headlines from UK</P>
- 
-    <section class="home-blog bg-sand" style="margin-top: 1px;">
-           <div class="row justify-content-md-center">
-               <div class="col-xl-5 col-lg-6 col-md-8">
-                   <div class="section-title text-center title-ex1">
-                       
-                   </div>
-               </div>
-           </div>
-           <!-- section title ends -->
-           <div class="row ">
-             
-   <ng-container *ngFor="let data of myNews.articles"> 
-<ng-container *ngIf ="data.urlToImage != null">
-               <div class="col-md-6">
-                   <div class="media blog-media">
-                     <a href=""><img [src]=" data.urlToImage  " style=""></a>
-                 
-                     <div class="media-body">
-                       <a href="{{data.url}} "><h5 class="mt-0" style="font-size: 10px;"> {{data.title}} </h5></a>
-                       <p style="font-size: 10px;">  {{data.description}} </p>
-                     
-                    
-                       <ul>
-                           <li style="font-size: 10px;color: orange;">{{data.source.name}} </li>
-                       </ul>
-                     </div>
-                   </div>
-               </div>
-           </ng-container>
-          </ng-container>
-       </div>
-   </section>
+    <div class="loader" *ngIf="loader">
+      <div class="spinner-grow text-warning"  style="width: 3rem; height: 3rem;"  role="status">
+    <span class="sr-only">Loading...</span></div>
+  </div>
+
+
+
+
+
    </div>
    

@@ -23,20 +23,25 @@ import { NewsComponent } from './news/news.component';
 import { FilterVideosPipe } from './filter-videos.pipe';  
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';  
 
+import { FilterPipe } from './FilterPipe';
+import { HighlightsServiceService } from './highlights-service.service';
+
+
 
 
 @NgModule({
-  declarations: [AppComponent,SafePipe, NavbarComponent, HomeComponent, StandingsComponent, StatsComponent, MatchesComponent, ScorersComponent, StatisticsComponent, LivescoresComponent, HighlightsComponent, NewsComponent, FilterVideosPipe ],
+  declarations: [AppComponent,SafePipe, NavbarComponent, HomeComponent, StandingsComponent, StatsComponent, MatchesComponent, ScorersComponent, StatisticsComponent, LivescoresComponent, HighlightsComponent, NewsComponent, FilterVideosPipe ,FilterPipe ],
   imports: [
     CommonModule,
     BrowserModule,
     AppRoutingModule,
     HttpClientModule, 
     FormsModule,
-    NgbModule
+    NgbModule,
+
   ],
   exports: [SafePipe],
-  providers: [SafePipe ,DatePipe],
+  providers: [SafePipe ,DatePipe , HighlightsServiceService ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
