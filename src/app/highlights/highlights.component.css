@@ -23,3 +23,9 @@
     text-indent: -100%;
     opacity: 1;
  }
+ .myInput{
+    height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+ }
